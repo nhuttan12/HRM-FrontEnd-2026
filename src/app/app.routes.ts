@@ -11,6 +11,12 @@ export const routes: Routes = [
         redirectTo: 'candidate-profile',
         pathMatch: 'full',
       },
+      {
+        path: 'candidate-profile',
+        loadComponent: () =>
+          import('./components/candidate-profile/candidate-profile-page.component')
+            .then((m) => m.CandidateProfileComponent),
+      },
     ],
   },
 ];
